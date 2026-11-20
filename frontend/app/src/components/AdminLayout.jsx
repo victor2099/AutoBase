@@ -28,7 +28,7 @@ export default function AdminLayout({ children }) {
       {/* Sidebar */}
       <aside className={`admin-sidebar ${sidebarOpen ? 'open' : 'closed'}`}>
         <div className="sidebar-header">
-          <h2>🚗 AutoBASE Admin</h2>
+          <h2>AutoBASE Admin</h2>
           <button 
             className="toggle-sidebar"
             onClick={() => setSidebarOpen(!sidebarOpen)}

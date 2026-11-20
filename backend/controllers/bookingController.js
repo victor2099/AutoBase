@@ -140,7 +140,7 @@ export const updateBooking = async (req, res, next) => {
         availability: false,
         status: "rented",
       });
-    } else if (status === "cancelled") {
+    } else if (["pending", "cancelled", "completed"].includes(status)) {
       await Car.findByIdAndUpdate(booking.carId, {
         availability: true,
         status: "available",

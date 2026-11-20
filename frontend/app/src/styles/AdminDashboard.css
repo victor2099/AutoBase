@@ -1,0 +1,145 @@
+.admin-dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.admin-dashboard-heading,
+.admin-dashboard-section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.admin-dashboard-heading h2 {
+  margin-bottom: 6px;
+}
+
+.admin-dashboard-heading p {
+  margin: 0;
+}
+
+.admin-dashboard-refresh {
+  border: 0;
+  border-radius: 5px;
+  padding: 9px 14px;
+  color: white;
+  background: #163f78;
+  cursor: pointer;
+}
+
+.admin-dashboard-refresh:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.admin-dashboard-error {
+  border: 1px solid #f1b9bd;
+  border-radius: 5px;
+  padding: 12px 16px;
+  color: #842029;
+  background: #f8d7da;
+}
+
+.admin-dashboard-error p {
+  margin: 0;
+  color: inherit;
+}
+
+.admin-dashboard-message {
+  margin: 0;
+  color: #666;
+}
+
+.admin-dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+.admin-dashboard-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid #e6e8eb;
+  border-left: 4px solid #163f78;
+  border-radius: 7px;
+  padding: 18px;
+  background: #fff;
+}
+
+.admin-dashboard-stat span {
+  color: #687381;
+  font-size: 13px;
+}
+
+.admin-dashboard-stat strong {
+  color: #1f2937;
+  font-size: 28px;
+}
+
+.admin-dashboard-recent {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.admin-dashboard-section-heading h3 {
+  margin: 0;
+  color: #333;
+  font-size: 18px;
+}
+
+.admin-dashboard-section-heading a {
+  color: #163f78;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.admin-dashboard-section-heading a:hover {
+  text-decoration: underline;
+}
+
+.admin-dashboard-table-wrap {
+  overflow-x: auto;
+}
+
+.admin-dashboard-table-wrap table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.admin-dashboard-table-wrap th,
+.admin-dashboard-table-wrap td {
+  padding: 12px;
+  border-bottom: 1px solid #e6e8eb;
+  white-space: nowrap;
+}
+
+.admin-dashboard-table-wrap th {
+  color: #5a6572;
+  background: #f5f7fa;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.admin-dashboard-table-wrap td {
+  color: #343a40;
+  font-size: 14px;
+}
+
+.admin-dashboard-status {
+  color: #343a40;
+  font-size: 13px;
+  text-transform: capitalize;
+}
+
+@media (max-width: 600px) {
+  .admin-dashboard-heading,
+  .admin-dashboard-section-heading {
+    align-items: flex-start;
+  }
+}

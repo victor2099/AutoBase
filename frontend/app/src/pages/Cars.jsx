@@ -50,7 +50,6 @@ export default function Cars() {
         ) : (
           cars.map((car) => (
             <div key={car._id} className="car-card">
-              {car.image && <img src={car.image} alt={`${car.make} ${car.model}`} />}
               <div className="car-info">
                 <h3>{car.make} {car.model}</h3>
                 <p className="year">Year: {car.year}</p>

@@ -16,7 +16,7 @@ export default function Header() {
     <header className="header">
       <div className="header-container">
         <div className="logo">
-          <h1>🚗AutoBASE</h1>
+          <h1>AutoBASE</h1>
         </div>
 
         <nav className="nav">
