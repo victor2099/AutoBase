@@ -1,7 +1,7 @@
-export const errorHandler = (err, req, res) => {
+
+export const errorHandler = (err, req, res, next) => {
   console.error("Error caught:", err);
 
-  // Default error
   let error = {
     statusCode: err.statusCode || 500,
     message: err.message || "Server Error",
@@ -16,7 +16,7 @@ export const errorHandler = (err, req, res) => {
   // Mongoose duplicate key
   if (err.code === 11000) {
     error.statusCode = 400;
-    error.message = `${Object.keys(err.keyValue)[0]} already exists`;
+    error.message = `${Object.keys(err.keyValue || {})[0]} already exists`;
   }
 
   // Mongoose validation error

@@ -22,6 +22,13 @@ app.use("/api/bookings", bookingRoutes);
 // Error handling middleware (must be last)
 app.use(errorHandler);
 
+app.get("/", (req, res) => {
+  res.status(200).json({
+    success: true,
+    message: "AutoBase API is running",
+  });
+});
+
 const startServer = async () => {
   await connectDB();
   app.listen(port, () => {
